@@ -4,22 +4,25 @@
 Эти инструкции позволят вам получить копию проекта и запустить его на вашей локальной машине для разработки и тестирования.
 ### Предварительные требования
 Для работы с проектом вам потребуется установить:
-Node.js
-NPM
-Docker
+- [Node.js](https://nodejs.org/)
+- [NPM](https://www.npmjs.com/)
+- [Docker](https://www.docker.com/)
 ### Установка
 #### Клонировать репозиторий
 git clone https://github.com/yourusername/your-project-name.git
+
 cd your-project-name
 #### Установить зависимости NPM
 npm install
 #### Запустить базу данных в Docker
 Убедитесь, что Docker установлен и запущен.
 Выполните команду для запуска контейнера с базой данных:
+
 docker-compose up -d
 #### Если захотите импортировать мою базу данных
 Скопируйте файл mydb.sql в корневую папку проекта.
 Выполните следующую команду для импорта базы данных в контейнер:
+
 docker exec -i testproject-db-1 mysql -u user -ppassword testdb < mydb.sql
 # Запустить проект
 npm start
